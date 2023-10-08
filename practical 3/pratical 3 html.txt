@@ -1,0 +1,39 @@
+<html>
+<body>
+<title>Practical 3</title><hr>
+
+<th>HOME PAGE</th><hr>
+
+<img src="th.jpg">
+<hr>
+<th>About Me:</th>
+<pre style="color:red">
+Hello My Name Is Abhishek Gautam
+I am a student of computer science
+now i am in second year
+graduation Batchlor of computer science
+(SYBSCs)
+<pre>
+<style>
+p{
+color:green
+}
+</style>
+<p>i am in MVLU college</p>
+
+<link rel="stylesheet" href="practical 3 external.css">
+<hr>
+
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge1.html"target="blank"> About your + people who have made difference to your life</a><br>
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge2.html"target="blank"> About your friends</a><br>
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge3.html"target="blank"> Your dreams and aspirations </a><br>
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge4.html"target="blank"> 10 things you wish in life</a><br>
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge5.html"target="blank"> 10 things you don’t wish to do but you have to do!</a><br>
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge6.html"target="blank"> Unforgettable moments in your life!</a><br>
+<a href="C:\Users\abhis\OneDrive\Desktop\Webtechnology\pge7.html"target="blank"> Your skills or services</a><br>
+
+
+
+
+</body>
+</html>

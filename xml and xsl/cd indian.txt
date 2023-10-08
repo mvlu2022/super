@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+<cd>
+<titel>Kya chahiye</title>
+<country>India</country>
+<company>Cock</company>
+<price>11.1</price>
+<year>2023</year>
+</cd>
+<cd>
+<title>tere liye</title>
+<country>India</country>
+<company>T-Sherise</company>
+<price>21.2</price>
+<year>2023</price>
+</cd>
+<cd>
+<title>Hawa ke jhonke</title>
+<country>India</country>
+<company>T-Sherise</company>
+<price>21.2</price>
+<year>2012</price>
+</cd>
+</catalog>
