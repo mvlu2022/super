@@ -1,0 +1,8 @@
+<html>
+<body>
+<h1>Abhishek</h1>
+<script>
+document.write("Hello this is my first javascript programe")
+</script>
+</body>
+</html>

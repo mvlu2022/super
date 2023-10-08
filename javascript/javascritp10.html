@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form id="registrationForm">
+    <label for="name">Name (No digits allowed):</label>
+    <input type="text" id="name" required><br><br>
+
+    <label for="age">Age (No characters allowed):</label>
+    <input type="text" id="age" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+    const nameInput = document.getElementById("name");
+    const ageInput = document.getElementById("age");
+    const emailInput = document.getElementById("email");
+    const registrationForm = document.getElementById("registrationForm");
+    const messageElement = document.getElementById("message");
+
+    nameInput.addEventListener("input", function() {
+        this.value = this.value.replace(/\d/g, ""); // Remove digits
+    });
+
+    ageInput.addEventListener("input", function() {
+        this.value = this.value.replace(/\D/g, ""); // Remove non-digits
+    });
+
+    emailInput.addEventListener("blur", function() {
+        if (this.value.trim() !== "") {
+            const isValidEmail = validateEmail(this.value);
+            if (!isValidEmail) {
+                messageElement.textContent = "Invalid email format.";
+                this.focus();
+            }
+        }
+    });
+
+    registrationForm.addEventListener("submit", function(event) {
+        const isValidName = nameInput.value.trim() !== "" && !/\d/.test(nameInput.value);
+        const isValidAge = ageInput.value.trim() !== "" && /^\d+$/.test(ageInput.value);
+        const isValidEmail = validateEmail(emailInput.value);
+
+        if (!isValidName) {
+            messageElement.textContent = "Name should not contain digits.";
+            event.preventDefault();
+        } else if (!isValidAge) {
+            messageElement.textContent = "Age should be a number.";
+            event.preventDefault();
+        } else if (!isValidEmail) {
+            messageElement.textContent = "Invalid email format.";
+            event.preventDefault();
+        }
+    });
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+</script>
+
+</body>
+</html>

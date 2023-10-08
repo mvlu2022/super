@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Textbox Validation</title>
+</head>
+<body>
+
+<h1>Textbox Validation</h1>
+
+<label for="textbox">Enter Text:</label>
+<input type="text" id="textbox" placeholder="Type something"><br><br>
+
+<button onclick="validateTextbox()">Validate</button><br><br>
+
+<p id="validationMessage"></p>
+
+<script>
+    function validateTextbox() {
+        const textboxValue = document.getElementById("textbox").value;
+
+        if (textboxValue.trim() === "") {
+            document.getElementById("validationMessage").innerText = "Textbox cannot be empty.";
+        } else {
+            document.getElementById("validationMessage").innerText = "Textbox is not empty.";
+        }
+    }
+</script>
+
+</body>
+</html>

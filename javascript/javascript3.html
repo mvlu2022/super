@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+</head>
+<body>
+
+<script>
+    // Get user input using prompt dialog
+    const userInput = prompt("Enter a number:");
+
+    // Convert the user input to a number
+    const number = parseInt(userInput);
+
+    // Check if the input is valid
+    if (!isNaN(number) && number >= 0) {
+        // Calculate the factorial
+        let factorial = 1;
+        for (let i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        alert(`The factorial of ${number} is ${factorial}.`);
+    } else {
+        alert("Invalid input. Please enter a non-negative integer.");
+    }
+</script>
+
+</body>
+</html>

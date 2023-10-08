@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of First n Numbers</title>
+</head>
+<body>
+
+<script>
+    // Get user input for n using prompt dialog
+    const userInput = prompt("Enter a value for 'n':");
+
+    // Convert the user input to a number
+    const n = parseInt(userInput);
+
+    // Check if the input is valid
+    if (!isNaN(n) && n > 0) {
+        // Calculate the sum of the first n natural numbers
+        const sum = (n * (n + 1)) / 2;
+        alert(`The sum of the first ${n} natural numbers is ${sum}.`);
+    } else {
+        alert("Invalid input. Please enter a valid positive number.");
+    }
+</script>
+
+</body>
+</html>

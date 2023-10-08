@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interest Calculator</title>
+</head>
+<body>
+
+<h1>Abhishek Gautam---Interest Calculator</h1>
+
+<label for="principal">Principal Amount:</label>
+<input type="number" id="principal" placeholder="Enter principal amount"><br><br>
+
+<label for="years">Number of Years:</label>
+<input type="number" id="years" placeholder="Enter number of years"><br><br>
+
+<label for="rate">Rate of Interest (%):</label>
+<input type="number" id="rate" placeholder="Enter rate of interest"><br><br>
+
+<button onclick="calculateInterest()">Calculate Interest</button>
+<button onclick="calculateFinalAmount()">Final Amount</button><br><br>
+
+<p id="result"></p>
+
+<script>
+    function calculateInterest() {
+        const principal = parseFloat(document.getElementById("principal").value);
+        const years = parseFloat(document.getElementById("years").value);
+        const rate = parseFloat(document.getElementById("rate").value);
+
+        if (!isNaN(principal) && !isNaN(years) && !isNaN(rate)) {
+            const interest = (principal * rate * years) / 100;
+            document.getElementById("result").innerText = `Simple Interest: ${interest.toFixed(2)}`;
+        } else {
+            document.getElementById("result").innerText = "Invalid input. Please enter valid numbers.";
+        }
+    }
+
+    function calculateFinalAmount() {
+        const principal = parseFloat(document.getElementById("principal").value);
+        const years = parseFloat(document.getElementById("years").value);
+        const rate = parseFloat(document.getElementById("rate").value);
+
+        if (!isNaN(principal) && !isNaN(years) && !isNaN(rate)) {
+            const interest = (principal * rate * years) / 100;
+            const finalAmount = principal + interest;
+            document.getElementById("result").innerText = `Final Amount: ${finalAmount.toFixed(2)}`;
+        } else {
+            document.getElementById("result").innerText = "Invalid input. Please enter valid numbers.";
+        }
+    }
+</script>
+
+</body>
+</html>

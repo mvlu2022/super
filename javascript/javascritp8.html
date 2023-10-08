@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter with setTimeout and clearTimeout</title>
+</head>
+<body>
+
+<h1>Counter</h1>
+
+<p id="counterValue">0</p>
+<button id="startButton">Start Counter</button>
+<button id="stopButton">Stop Counter</button>
+
+<script>
+    let counter = 0;
+    let timer;
+
+    const counterValueElement = document.getElementById("counterValue");
+    const startButton = document.getElementById("startButton");
+    const stopButton = document.getElementById("stopButton");
+
+    function updateCounter() {
+        counterValueElement.textContent = counter;
+        counter++;
+        timer = setTimeout(updateCounter, 1000); // Update every 1 second
+    }
+
+    startButton.addEventListener("click", () => {
+        startButton.disabled = true;
+        stopButton.disabled = false;
+        updateCounter();
+    });
+
+    stopButton.addEventListener("click", () => {
+        clearTimeout(timer);
+        startButton.disabled = false;
+        stopButton.disabled = true;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even/Odd Checker</title>
+</head>
+<body>
+
+<script>
+    // Get user input using prompt dialog
+    const userInput = prompt("Enter a number:");
+
+    // Convert the user input to a number
+    const number = parseInt(userInput);
+
+    // Check if the number is valid
+    if (!isNaN(number)) {
+        // Check if the number is even or odd
+        if (number % 2 === 0) {
+            alert(`${number} is an even number.`);
+        } else {
+            alert(`${number} is an odd number.`);
+        }
+    } else {
+        alert("Invalid input. Please enter a valid number.");
+    }
+</script>
+
+</body>
+</html>
