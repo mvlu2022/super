@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> Validation checkbox</title>
+
+<script>
+function validation(){
+let x=document.forms["myform"]
+["fname"].value;
+if(x==""){
+alert("text should not empty");
+return false;
+} 
+}
+
+</script>
+</head>
+<body>
+<form name="myform" 
+action="" 
+onsubmit="return validation()"
+ method="post">
+name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</body>
+</html>
